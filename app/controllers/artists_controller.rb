@@ -12,6 +12,7 @@ class ArtistsController < ApplicationController
 
   get "/artists/:id" do
     @artist = Artist.find(params[:id])
+    @instruments = @artist.instruments
     erb :'artists/show'
   end
 
